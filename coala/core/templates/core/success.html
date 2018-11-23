@@ -1,0 +1,48 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contato.css' %}">
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="{% url 'index' %}" class="grid-4 btn btn-preto">
+            <p>COALA</p>
+        </a>
+
+        <nav class="grid-12 header_menu">
+
+            <ul>
+                <li><a href="{% url 'contos' %}">Contos</a></li>
+                <li><a href="{% url 'jogos' %}">Jogos</a></li>
+                <li><a href="{% url 'desenhos' %}">Desenhos</a></li>
+                <li><a href="{% url 'contato' %} class=" menu_ativo"">Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- Termina o cabeçalho -->
+<!-- Inicia a introdução -->
+
+<section class="introducao-interna interna_contato">
+
+    <div class="container">
+        <h1>Contato</h1>
+        <p>Entre em contato com a gente</p>
+
+    </div>
+
+</section>
+
+<section>
+    <p>Mensagem enviada com sucesso</p>
+</section>
+{% endblock%}

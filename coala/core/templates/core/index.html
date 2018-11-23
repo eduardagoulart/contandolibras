@@ -1,0 +1,279 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>COALA</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+   
+
+</head>
+
+<body>
+
+<!-- Faz o cabeçalho -->
+{% block content %}
+<header class="header">
+
+
+
+    <div class="container">
+        <a href="{% url 'index' %}" class="grid-4 btn btn-preto">
+            <p>COALA</p>
+        </a>
+
+        <nav class="grid-12 header_menu">
+
+            <ul>
+
+                <li><a href="{% url 'contos' %}">Contos</a></li>
+                <li><a href="{% url 'jogos' %}">Jogos</a></li>
+                <li><a href="{% url 'desenhos' %}">Desenhos</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+<!-- Termina o cabeçalho -->
+
+<section class="introducao">
+
+    <div class="container">
+
+        <h1>COALA - <u class="coala">CO</u>nt<u class="coala">A</u>ndo <u class="coala">L</u>ibr<u class="coala">A</u>s
+        </h1>
+
+        <blockquote class="quote-externo">
+
+            <p>"O homem nasceu para lutar e a sua vida é uma eterna batalha."</p>
+            <cite>THOMAS CARLYLE</cite>
+
+        </blockquote>
+
+        <a href="desenhos.html" class="btn">Sugestões</a>
+
+    </div>
+
+</section>
+
+<!-- Fecha a introdução -->
+
+<section class="doar container animar">
+
+    <h2 class="subtitulo">Descrição</h2>
+
+    <p class="descricao">COALA - <b class="coala">CO</b>nt<b class="coala">A</b>ndo <b class="coala">L</b>ibr<b
+            class="coala">A</b>s, O projeto foi criado em 2018 por alunos da Universidade Federal de São
+        João Del Rei, <br>com o objetivo de contar
+        contos infantis para crianças surdas.
+        Todos devem ter o gosto dos prazeres da infância, <br>nosso objetivo é trazer para essas crianças alguns desses
+        momentos,
+        como ouvir contos infantis e jogar jogos online sem dificuldades.
+    </p>
+
+</section>
+
+<!-- Fecha Informação inicial -->
+
+<!-- Inicia a Contos -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class="doar container">
+
+    <h2 class="subtitulo">Contos</h2>
+
+    <div class="row">
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/7q1kF5N1gHs" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>Rapunzel</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="grid-8">
+                <iframe height="305" src="https://www.youtube.com/embed/JuCVU9rGUa8" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>Chapeuzinho Vermelho</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style=" padding-top: 50px;">
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/J_Q75DiciJY" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>João e Maria</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/3PmKBVxaAfY" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>A festa no céu</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="call">
+        <p>Conheça nosso repositório com diversos contos!!!!</p>
+        <a href="{% url 'contos' %}" class="btn">Contos</a>
+    </div>
+
+</section>
+
+<section class="fotos">
+
+    <div class="container">
+
+        <h2 class="subtitulo">Jogos</h2>
+    <div class="card" style="width: 20rem; background: black;">
+        <img class="card-img-top" src="{% static 'img/titulo.png' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="color: white;">Jogo da Memoria</h5>
+          <p class="card-text"></p>
+          <a style=" padding-bottom: 2em;" href="{% url 'memoria' %}" class="btn btn-preto">Jogar</a>
+        </div>
+      </div>
+
+        <div class="call">
+            <p>Clique aqui e conheça nossos jogos</p>
+            <a href="{% url 'jogos' %}" class="btn btn-preto">Jogos</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Fecha Adoção -->
+{% endblock %}
+
+
+<!-- Inicia rodape -->
+
+<div class="quebra">
+
+    <blockquote class="quote-externo container">
+
+        <p>“O caminho para se conseguir a felicidade é fazendo as outras pessoas felizes.” </p>
+        <cite>ROBERT BADEN-POWELL</cite>
+
+    </blockquote>
+
+</div>
+
+<footer>
+
+    <div class="footer">
+
+        <div class="container">
+
+            <div class="grid-8 footer_historia">
+                <h3>Nossa História</h3>
+                <p>O projeto foi elaborado com o objetivo de criar um espaço virtual para crianças surdas tenham acesso
+                    passa-tempo digital. Estamos abertos à sugestões de novas ideias que possam ser inseridas no
+                    sistema.</p>
+            </div>
+
+            <div class="grid-4 footer_contato">
+                <h3>Contato</h3>
+                <ul>
+                    <li>-+55 032 99154-2604</li>
+                    <li>-contandolibras@gmail.com</li>
+                    <li>-São João Del Rei - MG</li>
+                </ul>
+            </div>
+
+            <div class="grid-4 footer_redes">
+
+                <h3>Redes Sociais</h3>
+
+                <ul>
+
+                    <li><a href="http://facebook.com" target="_blank"><img src="{% static 'img/icone/facebook-roxo.png' %}"
+                                                                           alt="Facebook Bikcraft"></a></li>
+                    <li><a href="http://instagram.com" target="_blank"><img src="{% static 'img/icone/instagram-roxo.png' %}"
+                                                                            alt="instagram Bikcraft"></a></li>
+                    <li><a href="http://twitter.com" target="_blank"><img src="{% static 'img/icone/twitter-roxo.png' %}"
+                                                                          alt="Twitter Bikcraft"></a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copy">
+
+        <div class="container">
+            <p class="grid-16">COALA Contando Libras - Alguns direitos reservados</p>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Final do rodapé -->
+
+<script src="{% static 'js/libs/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<!-- Paginas-->
+
+
+</body>
+
+</html>

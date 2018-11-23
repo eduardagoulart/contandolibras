@@ -1,0 +1,62 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/jogos.css' %}">
+
+<!-- Faz o cabeçalho -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="{% url 'index' %}" class="grid-4 btn btn-preto">
+            <p>COALA</p>
+        </a>
+
+        <nav class="grid-12 header_menu">
+
+            <ul>
+                <li><a href="{% url 'contos' %}">Contos</a></li>
+                <li><a href="{% url 'jogos' %}" class="menu_ativo">Jogos</a></li>
+                <li><a href="{% url 'desenhos' %}">Desenhos </a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- Termina o cabeçalho -->
+<!-- Inicia a introdução -->
+
+<section class="introducao introducao-interna interna_adotar">
+
+    <div class="container quote-externo">
+        <h1>Jogos</h1>
+        <p>Sessão de jogos sobre libras</p>
+
+    </div>
+
+</section>
+
+
+<!-- Fecha a introdução -->
+
+<!-- Inicia a adoção -->
+
+<section class="animal container animar-interno">
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{% static 'img/titulo.png' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Jogo da Memoria</h5>
+          <p class="card-text"></p>
+          <a style=" padding-bottom: 2em;" href="{% url 'memoria' %}" class="btn ">Jogar</a>
+        </div>
+      </div>
+</section>
+
+{% endblock %}

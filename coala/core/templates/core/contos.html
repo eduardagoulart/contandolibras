@@ -1,0 +1,170 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Faz o cabeçalho -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/contos.css' %}">
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="{% url 'index' %}" class="grid-4 btn btn-preto">
+            <p>COALA</p>
+        </a>
+
+        <nav class="grid-12 header_menu">
+
+            <ul>
+                <li><a href="{% url 'contos' %} class=" menu_ativo"">Contos</a></li>
+                <li><a href="{% url 'jogos' %}">Jogos</a></li>
+                <li><a href="{% url 'desenhos' %}">Desenhos</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- Termina o cabeçalho -->
+<!-- Inicia a introdução -->
+
+<section class="introducao introducao-interna interna_adotar">
+
+    <div class="container quote-externo">
+        <h1>Contos</h1>
+        <p>Sessão que contém as mais diversas histórias infantis em libras</p>
+
+    </div>
+
+</section>
+
+
+<!-- Fecha a introdução -->
+
+<!--Corrigir e inserir no css  style corretamente -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class="doar container">
+
+    <h2 class="subtitulo">Contos</h2>
+
+    <div class="row">
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/7q1kF5N1gHs" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>Rapunzel</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="grid-8">
+                <iframe height="305" src="https://www.youtube.com/embed/JuCVU9rGUa8" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>Chapeuzinho Vermelho</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style=" padding-top: 50px;">
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/J_Q75DiciJY" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>João e Maria</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/3PmKBVxaAfY" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>A festa no céu</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style=" padding-top: 50px;">
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/1TPI8U4l_0E" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>A bela adormecida</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/4mUS3Wc-rGo" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>A pequena sereia</h3>
+                <p>Chegada do Porta-Helicópteros Multipropósito "Atlântico"</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style=" padding-top: 50px;">
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/wSom2qvwWR0" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>A Branca de Neve e os Sete Anões</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="grid-8">
+
+                <iframe height="305" src="https://www.youtube.com/embed/aw2ts6GfuLI" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3>Cinderela</h3>
+                <p>Descrição da história</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
