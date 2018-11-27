@@ -18,7 +18,9 @@ def contato(request):
             return redirect('success')
     else:
         form = SubscriptionForm()
-    return render(request, 'core/contato.html', {'form': form})
+
+    context = {'form': form}
+    return render(request, 'core/contato.html', context)
 
 
 def contos(request):
