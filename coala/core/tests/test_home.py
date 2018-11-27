@@ -12,3 +12,8 @@ class HomeTest(TestCase):
     def test_template(self):
         """Testa a existência do template"""
         self.assertTemplateUsed(self.resp, 'core/index.html')
+
+    def test_html(self):
+        """Html deve conter as tags de entrada"""
+        self.assertContains(self.resp, 'target="_blank"')
+        self.assertContains(self.resp, '<iframe', 4)
